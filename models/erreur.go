@@ -1,5 +1,7 @@
 package models
 
+import "errors"
+
 // Erreurs personnalisées, testables avec errors.Is.
 var (
 	ErrRequestCreation = errors.New("impossible de créer la requête")
