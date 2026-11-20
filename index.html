@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - {{.Name.Fr}}</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/jeu.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <div class="card">
+        <p><strong>N°{{.Id}}</strong></p>
+        <img class="sprite" src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}">
+        <h2>{{.Name.Fr}}</h2>
+        <p><em>{{.Category}}</em></p>
+
+        <div class="types">
+            {{range .Types}}
+                <div class="type-badge">
+                    <img src="{{.Image}}" alt="{{.Name}}">
+                    <span>{{.Name}}</span>
+                </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
