@@ -1,5 +1,9 @@
 package models
 
+type PokemonPage struct{
+	Results []Pokemon `json:"results"`
+}
+
 type Pokemon struct {
 	Id       int     `json:"pokedex_id"`
 	Category string  `json:"category"`
