@@ -1,15 +1,16 @@
 package main
 
 import (
-	"API/api"
-	"fmt"
+	"API/helpers"
+	"API/routes"
 	"log"
+	"net/http"
 )
 
 func main() {
-	pokemon, err := api.GetPokemon(25)
-	if err != nil {
-		log.Fatalf("Impossible a charger le pokémon %v", err)
-	}
-	fmt.Println(pokemon)
+	helpers.LoadTemplates()
+	router := routes.MainRouter()
+
+	log.Println("Serveur lancé sur http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", router))
 }

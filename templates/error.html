@@ -1,0 +1,16 @@
+{{define "error"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Erreur {{.Code}}</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=2">
+    <link rel="shortcut icon" href="/static/images/jeu.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Erreur {{.Code}}</h1>
+    <p>{{.Message}}</p>
+    <a href="/pokemon">Retour à la liste</a>
+</body>
+</html>
+{{end}}

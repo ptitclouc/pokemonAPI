@@ -1,7 +1,8 @@
 package models
 
-type PokemonPage struct{
-	Results []Pokemon `json:"results"`
+type ListPage struct {
+	Search     string    // recherche saisie, pour la réafficher dans le formulaire
+	Characters []Pokemon `json:"result"`
 }
 
 type Pokemon struct {
